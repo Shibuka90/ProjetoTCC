@@ -1,11 +1,8 @@
-import './App.css';
+import Routes from "./Routes";
 
-function App() {
-  return (
-    <div className="App">
-
+export default props =>
+  <BrowserRouter>
+    <div className="app">
+      <Routes/>
     </div>
-  );
-}
-
-export default App;
+  </BrowserRouter>
