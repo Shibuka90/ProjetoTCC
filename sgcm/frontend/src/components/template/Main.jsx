@@ -6,7 +6,9 @@ class Conteudo extends Component {
     render() {
         return(
             <React.Fragment>
+                <Header />
                 <main className="content">
+                    
                     Conteúdo
                 </main>
             </React.Fragment>
