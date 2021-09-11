@@ -1,0 +1,24 @@
+header.header{
+    background: linear-gradient(to right, #e52d27, #b31217);
+    padding: 0px 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: var(--shadow);
+    color: #fff
+}
+
+header.header i{
+    padding: 0px 10px 0px 0px;
+    font-size: 2em;
+}
+
+header.header h1 {
+    font-size: 1.5em;
+
+}
+
+header.header h3 {
+    font-size: 1em;
+    padding: 3px 0px 0px 0px;
+
+}
