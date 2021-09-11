@@ -1,0 +1,7 @@
+.menu-main a{
+    display: flex;
+    text-decoration: none;
+    color: red;
+    font-weight: 300;
+    padding: 15px;
+}

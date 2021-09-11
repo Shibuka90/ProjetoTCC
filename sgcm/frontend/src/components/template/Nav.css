@@ -4,25 +4,25 @@ aside.menu-area{
                  2px 0 15px 0 rgba(0, 0, 0, 0.09);
 }
 
-.menu a {
+.menu-nav a {
     display: block;
     text-decoration: none;
-    color: #fff;
     font-weight: 300;
+    color: #fff;
     padding: 15px;
 }
 
-.menu a:hover{
+.menu-nav a:hover{
     background: linear-gradient(135deg, #e52d27, #b31217 100%);
 }
 
-.menu span{
+.menu-nav span{
     font-size: 0.9em;
     font-weight: 500;
     padding: 5px;
 
 }
-.menu i{
+.menu-nav i{
     font-size: 1.5em;
 }
 
