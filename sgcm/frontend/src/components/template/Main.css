@@ -1,9 +1,61 @@
-.menu-main a{
+.menu-main{
+    display: inline-flex;
+    padding: 30px;    
+}
+.cadastro{
+    display: block;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0 30px 10px 0;
+}
+
+.cadastro:hover {
+    background: linear-gradient(135deg, #e52d27, #b31217 100%);
+    color: #fff;
+}
+
+.cadastro a{
     display: flex;
     text-decoration: none;
     justify-content: center;
     align-items: center;
+    font-size: 7em;
     color: red;
-    font-weight: 300;
-    padding: 15px;
 }
+
+.cadastro span{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+    font-weight: 500;
+}
+.agendamento {
+    display: block;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0 30px 10px 30px;
+}
+
+.agendamento a{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 7em;
+    color: red;
+}
+
+.agendamento:hover{
+    background: linear-gradient(135deg, #e52d27, #b31217 100%);
+}
+
+
+

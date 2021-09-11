@@ -7,18 +7,31 @@ export default props =>
         <Header {...props} />
         <main className="content container-fluid">
             <div className="menu-main">
-                <a href="#/cadastro">
-                    <i className="fa fa-folder"></i><span>Cadastros Gerais</span>
-                </a>
-                <a href="#/agendamento">
-                    <i className="fa fa-calendar"></i><span>Agendamento</span>
-                </a>
-                <a href="#/atendimento">
-                    <i className="fa fa-users"></i><span>Atendimento</span>
-                </a>
-                <a href="#/prontuario">
-                    <i className="fa fa-first-aid"></i><span>Prontuario</span>
-                </a>
+                <div className="cadastro">
+                    <a href="#/cadastro">
+                        <i className="fa fa-folder"></i>
+                    </a>
+                    <span>Cadastros Gerais</span>                    
+                </div>
+                
+                <div className="agendamento">
+                    <a href="#/agendamento">
+                        <i className="fa fa-calendar"></i>
+                    </a>
+                    <span>Agendamento</span>
+                </div>
+                {/* <div className="atendimento">
+                    <a href="#/atendimento">
+                        <i className="fa fa-users"></i>
+                    </a>
+                    <span>Atendimento</span>
+                </div> */}
+                {/* <div className="prontuario">
+                    <a href="#/prontuario">
+                        <i className="fa fa-first-aid"></i>
+                    </a>
+                    <span>Prontuário</span>
+                </div>             */}
             </div>
         </main>
     </React.Fragment>
