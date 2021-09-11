@@ -1,6 +1,8 @@
 .menu-main a{
     display: flex;
     text-decoration: none;
+    justify-content: center;
+    align-items: center;
     color: red;
     font-weight: 300;
     padding: 15px;

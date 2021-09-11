@@ -18,7 +18,7 @@ export default props =>
                     <i className="fa fa-users"></i><span>Atendimento</span>
                 </a>
                 <a href="#/prontuario">
-                    <i className="fa fa-first-aid"></i><span>Atendimento</span>
+                    <i className="fa fa-first-aid"></i><span>Prontuario</span>
                 </a>
             </div>
         </main>

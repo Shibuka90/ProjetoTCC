@@ -14,7 +14,7 @@ export default props =>
                <i className="fa fa-user-md"></i><span>Médicos</span>
            </a>
            <a href="#/cadastro/convenio">
-               <i className="fa fa-book"></i><span>Convênios</span>
+               <i className="fa fa-book-medical"></i><span>Convênios</span>
            </a>
            <a href="#/cadastro/especialidades">
                 <i class="fa fa-stethoscope"></i><span>Especialidades</span>
