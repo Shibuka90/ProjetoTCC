@@ -1,9 +1,11 @@
 import React from "react";
 import Main from "../template/Main";
 import { Link } from 'react-router-dom'
+import Nav from "../template/Nav";
 
 export default props =>
-    <Main icon="home" title="SGCM" subtitle="Sistema de Gestão de Clínica Médica - Módulos">
+    <React.Fragment>
+        <Main icon="home" title="SGCM" subtitle="Sistema de Gestão de Clínica Médica - Módulos">
         <div className="menu-main">
             <div className="cadastro">
                 <Link to="/cadastro">
@@ -31,3 +33,7 @@ export default props =>
             </div>
         </div>
     </Main>
+    
+
+    </React.Fragment>
+    
