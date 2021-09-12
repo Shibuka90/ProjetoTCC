@@ -104,3 +104,38 @@
     font-size: 1.7em;
     font-weight: 500;
 }
+
+.table{
+    margin: 0;
+    padding: 10px; 
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table tr, .table th, .table td{
+    border: 1px solid #000;
+    text-align: center;
+
+}
+
+.row {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botaoNovo{
+    margin:  0 10px 0 0;
+    font-size: 1.2em;
+    background-color: white;
+    font-weight: 500;
+}
+
+.botaoExcluir{
+    margin: 0 10px 0 10px;
+    font-size: 1.2em;
+    background-color: red;
+    color: white;
+    font-weight: 500;
+}
