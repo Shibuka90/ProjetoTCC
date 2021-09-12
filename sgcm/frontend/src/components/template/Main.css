@@ -1,61 +1,102 @@
 .menu-main{
-    display: inline-flex;
+    display: flex;
+    justify-content: space-between;
     padding: 30px;    
 }
 .cadastro{
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
-    justify-content: center;
     align-items: center;
 
     margin: 0;
-    padding: 0 30px 10px 0;
+    padding: 5px;
 }
 
 .cadastro:hover {
-    background: linear-gradient(135deg, #e52d27, #b31217 100%);
-    color: #fff;
+    border: 5px solid #000 ;
 }
 
 .cadastro a{
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
     font-size: 7em;
     color: red;
 }
 
 .cadastro span{
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
     font-size: 1.7em;
     font-weight: 500;
 }
+
 .agendamento {
-    display: block;
-    text-decoration: none;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;    
     align-items: center;
 
     margin: 0;
-    padding: 0 30px 10px 30px;
+    padding: 5px;
+}
+
+.agendamento:hover{
+    border: 5px solid #000 ;
 }
 
 .agendamento a{
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
     font-size: 7em;
     color: red;
 }
 
-.agendamento:hover{
-    background: linear-gradient(135deg, #e52d27, #b31217 100%);
+.agendamento span{
+    font-size: 1.7em;
+    font-weight: 500;
 }
 
+.atendimento{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+
+    margin: 0;
+    padding: 5px;
+}
+
+.atendimento:hover {
+    border: 5px solid #000 ;
+}
+
+.atendimento a{
+    font-size: 7em;
+    color: red;
+}
+
+.atendimento span{
+    font-size: 1.7em;
+    font-weight: 500;
+}
+
+.prontuario{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+
+    margin: 0;
+    padding: 5px;
+}
+
+.prontuario:hover {
+    border: 5px solid #000 ;
+}
+
+.prontuario a{
+    font-size: 7em;
+    color: red;
+}
+
+.prontuario span{
+    font-size: 1.7em;
+    font-weight: 500;
+}
 
 

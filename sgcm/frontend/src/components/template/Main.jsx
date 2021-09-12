@@ -1,5 +1,6 @@
 import './Main.css'
 import Header from './Header'
+import { Link } from 'react-router-dom'
 import React from 'react'
 
 export default props =>
@@ -8,30 +9,30 @@ export default props =>
         <main className="content container-fluid">
             <div className="menu-main">
                 <div className="cadastro">
-                    <a href="#/cadastro">
+                    <Link to="/cadastro">
                         <i className="fa fa-folder"></i>
-                    </a>
+                    </Link>
                     <span>Cadastros Gerais</span>                    
                 </div>
                 
                 <div className="agendamento">
-                    <a href="#/agendamento">
+                    <Link to="/agendamento">
                         <i className="fa fa-calendar"></i>
-                    </a>
+                    </Link>
                     <span>Agendamento</span>
                 </div>
-                {/* <div className="atendimento">
-                    <a href="#/atendimento">
+                <div className="atendimento">
+                    <Link to="/atendimento">
                         <i className="fa fa-users"></i>
-                    </a>
+                    </Link>
                     <span>Atendimento</span>
-                </div> */}
-                {/* <div className="prontuario">
-                    <a href="#/prontuario">
+                </div>
+                <div className="prontuario">
+                    <Link to="/prontuario">
                         <i className="fa fa-first-aid"></i>
-                    </a>
+                    </Link>
                     <span>Prontuário</span>
-                </div>             */}
+                </div>            
             </div>
         </main>
     </React.Fragment>
