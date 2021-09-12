@@ -1,18 +1,9 @@
-import './Cadastro.css'
-import React, { Component } from 'react'
+import React from "react";
+import Nav from "../template/Nav";
 import { Link } from 'react-router-dom'
-import MainCadastro from '../template/MainCadastro'
 
-const headerProps = {
-    icon: 'folder',
-    title: 'Cadastro Gerais',
-    subtitle: "Pacientes - Médicos - Convênios - Especialidades - Serviços - Colaboradores"
-}
-
-export default class Cadastro extends Component {
-    render() {
-        return(
-            <React.Fragment>
+export default props =>
+    <Nav icon="folder" title="Cadastros Gerais" subtitle="Paciente - Médicos - Convênios - Especialidades - Serviços - Colaboradores">
         <aside className="menu-area">
             <nav className="menu-nav">
                 <Link to="/">
@@ -38,14 +29,4 @@ export default class Cadastro extends Component {
                 </Link>
             </nav>
         </aside>
-        <MainCadastro {...headerProps}>
-            Falta muita coisa, mas chegaremos lá...........
-        </MainCadastro>
-    </React.Fragment>
-            
-        )
-    }
-}
-
-    
-   
+    </Nav>
