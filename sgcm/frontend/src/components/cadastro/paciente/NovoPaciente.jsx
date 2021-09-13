@@ -9,18 +9,7 @@ const headerProps = {
     title: "Cadastros de Pacientes",
 }
 
-export default class Pacientes extends Component {
-
-    renderButton() {
-        return(
-            <div className="row">                
-                <div className="col-12 d-flex">
-                    <button className="botaoNovo" onClick={<Link to='/novopacientes'/>}>Novo</button>             
-                    <button className="botaoExcluir">Excluir</button>
-                </div>
-            </div>
-        )
-    }
+export default class NovoPaciente extends Component {
     renderTable() {
         return(
             <table className="table">
@@ -66,8 +55,7 @@ export default class Pacientes extends Component {
     render() {
         return (
             <React.Fragment>
-                 <Main>
-                  {this.renderButton()}
+                 <Main>                 
                   {this.renderTable()}
                 </Main>
                <Nav>
