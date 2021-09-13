@@ -13,11 +13,19 @@ export default class NovoPaciente extends Component {
     renderForm() {
         return(
             <div className="form">
-                <div className="rowForm1">
+                <div className="row">
                     <div className="col-12 ">
                         <div className="form-group1">
                             <label className="nomeLabel">Nome: </label>
-                            <input type="text" className="form-control" name="name" placeholder="Digite o nome....." />
+                            <input type="text" className="form-control" name="name" placeholder="Digite o nome....." />                            
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-group2">
+                            <label className="dataNasc">Data Nasc.: </label>
+                            <input type="date" className="form-control" name="date"/>
+                            <label className="cpf">CPF: </label>
+                            <input type="text" className="form-control" name="cpf"  placeholder="Digite o CPF....." />
                             <label className="sexoLabel">Sexo: </label>
                             <input className="sexo" type="radio" value="Male" name="gender"/>M
                             <input className="sexo" type="radio" value="Female" name="gender"/>F
