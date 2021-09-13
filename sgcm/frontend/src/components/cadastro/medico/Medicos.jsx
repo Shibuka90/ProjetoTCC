@@ -5,11 +5,11 @@ import Nav from "../../template/Nav";
 import Header from "../../template/Header";
 
 const headerProps = {
-    icon: 'user',
-    title: "Cadastros de Pacientes",
+    icon: 'user-md',
+    title: "Cadastros de Médicos",
 }
 
-export default class Pacientes extends Component {
+export default class Medicos extends Component {
     renderButton() {
         return(
             <div className="row">                
@@ -25,12 +25,10 @@ export default class Pacientes extends Component {
             <table className="table">
                 <thead>
                     <tr>
-                        <th>Prontuário</th>
+                        <th>Código</th>
                         <th>Nome</th>
-                        <th>Data Nasc.</th>
-                        <th>CPF</th>
-                        <th>Matricula</th>
-                        <th>Plano</th>
+                        <th>Especialidade</th>
+                        <th>CRM</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,24 +37,18 @@ export default class Pacientes extends Component {
                         <td>Keonny Schunzo Shibukawa</td>
                         <td>08/01/1990</td>
                         <td>12345678901</td>
-                        <td>12364</td>
-                        <td>UniCamp</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Daniele Christine Guimarães Shibukawa</td>
                         <td>31/08/1987</td>
                         <td>98765432190</td>
-                        <td>5457547</td>
-                        <td>UniCamp</td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Solange Aparecida Vittori Shibukawa</td>
                         <td>17/08/1957</td>
                         <td>65498732102</td>
-                        <td>578434</td>
-                        <td>UniCamp</td>
                     </tr>
                 </tbody>
             </table>

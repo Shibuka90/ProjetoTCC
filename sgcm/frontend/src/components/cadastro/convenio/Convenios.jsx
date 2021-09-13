@@ -1,18 +1,60 @@
 import React, { Component } from "react";
-import Nav from "../template/Nav";
+import Main from "../../template/Main";
 import { Link } from 'react-router-dom'
-import Header from "../template/Header";
+import Nav from "../../template/Nav";
+import Header from "../../template/Header";
 
 const headerProps = {
-    icon:"folder",
-    title:"Cadastros Gerais",
-    subtitle:"Paciente - Médicos - Convênios - Especialidades - Serviços - Colaboradores"
+    icon: 'book-medical',
+    title: "Cadastros de Convênios",
 }
-export default class HomeCadastro extends Component {
+
+export default class Convenios extends Component {
+    renderButton() {
+        return(
+            <div className="row">                
+                <div className="col-12 d-flex">
+                    <button className="botaoNovo">Novo</button>             
+                    <button className="botaoExcluir">Excluir</button>
+                </div>
+            </div>
+        )
+    }
+    renderTable() {
+        return(
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Convênio</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Unimed Campinas</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Beneficência Portuguesa</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Santa Tereza</td>
+                    </tr>
+                </tbody>
+            </table>
+        )
+    }
     render() {
         return (
             <React.Fragment>
-                <Nav {...headerProps}>
+                 <Main>
+                  {this.renderButton()}
+                  {this.renderTable()}
+                </Main>
+               <Nav>
                     <aside className="menu-area">
                         <nav className="menu-nav">
                             <Link to="/">
@@ -38,10 +80,9 @@ export default class HomeCadastro extends Component {
                             </Link>
                         </nav>
                     </aside>
-                </Nav>
+                </Nav>               
+                <Header {...headerProps} />
             </React.Fragment>
-
         )
     }
 }
-    
