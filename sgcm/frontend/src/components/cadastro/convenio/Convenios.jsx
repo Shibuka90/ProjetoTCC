@@ -12,7 +12,7 @@ const headerProps = {
 export default class Convenios extends Component {
     renderButton() {
         return(
-            <div className="row">                
+            <div className="rowButton">                
                 <div className="col-12 d-flex">
                     <button className="botaoNovo">Novo</button>             
                     <button className="botaoExcluir">Excluir</button>
