@@ -1,6 +1,7 @@
 import React from "react";
 import Main from "../template/Main";
 import { Link } from 'react-router-dom'
+import Nav from "../template/Nav";
 
 export default props =>
     <React.Fragment>
@@ -32,6 +33,7 @@ export default props =>
             </div>
         </div>
     </Main>
+    
     
 
     </React.Fragment>

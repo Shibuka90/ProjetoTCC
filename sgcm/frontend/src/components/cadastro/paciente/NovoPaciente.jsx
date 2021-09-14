@@ -24,7 +24,7 @@ export default class NovoPaciente extends Component {
                     <div className="col-12">
                         <div className="form-group2">
                             <label className="cpf">CPF: </label>                           
-                            <input type="text" className="cpf" name="cpf" />                         
+                            <input type="text" className="cpf" name="cpf" maxLength="14" placeholder="xxx.xxx.xxx-xx" />                         
                             <label className="dataNasc" >Data Nasc.: </label>
                             <input type="date" className="dateNasc" name="date" required/>
                             <label className="sexoLabel">Sexo: </label>
