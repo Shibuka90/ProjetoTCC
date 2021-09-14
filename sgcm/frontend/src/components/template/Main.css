@@ -154,6 +154,15 @@
 .form-control{
     margin: 0 10px 0 0;
 }
+
+.form-group2{
+    margin: 0;
+    padding: 0 10px 0 0;
+    display: flex;
+    align-items: center; 
+    font-size: 1em;  
+}
+
 .sexoLabel{
     /* margin: 0 10px 0 0; */
     font-weight: 500;
@@ -164,10 +173,12 @@
     font-weight: 500;
 }
 
-.form-group2{
-    margin: 0;
-    padding: 0 10px 0 0;
-    display: flex;
-    align-items: center; 
-    font-size: 1em;  
+.dataNasc{
+    margin: 0 10px 0 0;
+    font-weight: 500;
+}
+
+.cpf{
+    margin: 0 10px 0 0;
+    font-weight: 500;
 }
