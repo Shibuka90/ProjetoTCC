@@ -3,7 +3,6 @@ import Main from "../../template/Main";
 import { Link } from 'react-router-dom'
 import Nav from "../../template/Nav";
 import Header from "../../template/Header";
-import MaskedInput from "./CPF";
 
 const headerProps = {
     icon: 'user',
@@ -11,6 +10,7 @@ const headerProps = {
 }
 
 export default class NovoPaciente extends Component {
+
     renderForm() {
         return(
             <div className="form">
@@ -23,11 +23,10 @@ export default class NovoPaciente extends Component {
                     </div>
                     <div className="col-12">
                         <div className="form-group2">
+                            <label className="cpf">CPF: </label>                           
+                            <input type="text" className="cpf" name="cpf" />                         
                             <label className="dataNasc" >Data Nasc.: </label>
-                            <input type="date" className="form-control" name="date" required/>
-                            <label className="cpf">CPF: </label>
-                            <MaskedInput />
-                            {/* <input type="text" className="form-control" name="cpf"  placeholder="Digite o CPF....." required /> */}
+                            <input type="date" className="dateNasc" name="date" required/>
                             <label className="sexoLabel">Sexo: </label>
                             <input className="sexo" type="radio" value="Male" name="gender"/>M
                             <input className="sexo" type="radio" value="Female" name="gender"/>F
