@@ -18,18 +18,54 @@ export default class NovoPaciente extends Component {
                     <div className="col-12 ">
                         <div className="form-group1">
                             <label className="nomeLabel">Nome: </label>
-                            <input type="text" className="form-control" name="name" placeholder="Digite o nome....." required />                            
+                            <input type="text" className="nome" style={{width: "100%"}} name="name" placeholder="Digite o nome....." required />                            
                         </div>
                     </div>
                     <div className="col-12">
                         <div className="form-group2">
-                            <label className="cpf">CPF: </label>                           
-                            <input type="text" className="cpf" name="cpf" maxLength="14" placeholder="xxx.xxx.xxx-xx" />                         
-                            <label className="dataNasc" >Data Nasc.: </label>
-                            <input type="date" className="dateNasc" name="date" required/>
+                            <label className="cpfLabel">CPF: </label>                           
+                            <input type="text" className="cpf" name="cpf" style={{width: "130px"}} required maxLength="14" placeholder="xxx.xxx.xxx-xx" />                         
+                            <label className="dataNascLabel" >Data Nasc.: </label>
+                            <input type="date" className="dateNasc" style={{width: "160px"}} name="date" required/>
                             <label className="sexoLabel">Sexo: </label>
                             <input className="sexo" type="radio" value="Male" name="gender"/>M
                             <input className="sexo" type="radio" value="Female" name="gender"/>F
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-group3">
+                            <label className="maeLabel">Mãe:</label>
+                            <input type="text" style={{width: "100%"}} name="mae" required  placeholder="Digite no nome..."/>
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-group4">
+                            <label className="paiLabel">Pai:</label>
+                            <input type="text" style={{width: "100%"}} name="pai" required  placeholder="Digite no nome..."/>
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-group5">
+                            <label className="cepLabel">CEP: </label>
+                            <input type="text" style={{width: "90px"}} className="cep" name="cep" required maxLength="9" placeholder="xxxxx-xxx" />
+                            <label className="enderecoLabel">Endereço: </label>
+                            <input type="text" style={{width: "100%"}} name="endereco" required placeholder="Digite o endereço....." />
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-group6">
+                            <label className="numeroLabel">Nº</label>
+                            <input type="text" style={{width: "50px"}} className="numero" name="numero" required maxLength="4"/>
+                            <label className="bairroLabel">Bairro:</label>
+                            <input type="text" style={{width: "100%"}} className="bairro" name="bairro" required />
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-group7">
+                            <label className="cidadeLabel">Cidade: </label>
+                            <input type="text" className="cidade" name="cidade" required />
+                            <label className="ufLabel">UF: </label>
+                            <input type="text" style={{width: "30px"}} className="uf" name="uf" required maxLength="2"/>
                         </div>
                     </div>
                 </div>

@@ -140,23 +140,19 @@
     font-weight: 500;
 }
 .form-group1{
-    margin: 0;
-    padding: 0 10px 10px 0;
+    margin: 0 0 10px 0;
+    padding: 0 10px 0 0;
     display: flex;
     align-items: center; 
     font-size: 1em;  
 }
-.nomeLabel{
-    margin: 0 10px 0 0;
+.nomeLabel {
+    margin: 0 12px 0 0;
     font-weight: 500;
 }
 
-.form-control{
-    margin: 0 10px 0 0;
-}
-
 .form-group2{
-    margin: 0;
+    margin: 0 0 10px 0;
     padding: 0 10px 0 0;
     display: flex;
     align-items: center; 
@@ -164,7 +160,7 @@
 }
 
 .sexoLabel{
-    /* margin: 0 10px 0 0; */
+    margin: 0 10px 0 50px;
     font-weight: 500;
 }
 
@@ -173,20 +169,118 @@
     font-weight: 500;
 }
 
-.dataNasc{
+.dataNascLabel{
     margin: 0 10px 0 0;
     font-weight: 500;
 }
 
-.cpf{
-    margin: 0 10px 0 0;
+.cpfLabel{
+    margin: 0 30px 0 0;
     font-weight: 500; 
 }
 
-#cpf{
-    width: 100%;
+.cpf{
+    margin: 0 28px 0 0;
+    font-weight: 500; 
 }
 
 .dateNasc{
     margin: 0 10px 0 0;
 }
+
+.form-group3{
+    margin: 0 0 10px 0;
+    padding: 0 10px 0 0;
+    display: flex;
+    align-items: center; 
+    font-size: 1em;  
+}
+
+.maeLabel{
+    margin: 0 28px 0 0;
+    font-weight: 500; 
+}
+
+.form-group4{
+    margin: 0 0 10px 0;
+    padding: 0 10px 0 0;
+    display: flex;
+    align-items: center; 
+    font-size: 1em;  
+}
+
+.paiLabel{
+    margin: 0 37px 0 0;
+    font-weight: 500; 
+}
+
+.form-group5{
+    margin: 0 0 10px 0;
+    padding: 0 10px 0 0;
+    display: flex;
+    align-items: center; 
+    font-size: 1em;  
+}
+
+.cep{
+    margin: 0 12px 0 0;
+}
+
+.cepLabel{
+    margin: 0 28px 0 0;
+    font-weight: 500; 
+} 
+
+.enderecoLabel{
+    margin: 0 10px 0 0;
+    font-weight: 500;
+}
+
+.form-group6{
+    margin: 0 0 10px 0;
+    padding: 0 10px 0 0;
+    display: flex;
+    align-items: center; 
+    font-size: 1em;  
+}
+
+.numeroLabel{
+    margin: 0 46px 0 0;
+    font-weight: 500; 
+}
+
+.numero{
+    margin: 0 12px 0 0;
+}
+
+.bairroLabel{
+    margin: 0 10px 0 0;
+    font-weight: 500; 
+}
+
+.form-group6{
+    margin: 0 0 10px 0;
+    padding: 0 10px 0 0;
+    display: flex;
+    align-items: center; 
+    font-size: 1em;  
+}
+
+.cidadeLabel{
+    margin: 0 5px 0 0;
+    font-weight: 500; 
+}
+
+.cidade{
+    margin: 0 12px 0 0;
+}
+
+.ufLabel{
+    margin: 0 5px 0 0;
+    font-weight: 500; 
+}
+
+
+
+
+
