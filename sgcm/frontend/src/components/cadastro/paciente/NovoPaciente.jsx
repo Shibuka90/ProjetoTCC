@@ -25,7 +25,7 @@ export default class NovoPaciente extends Component {
                         <div className="form-group2">
                             <label className="cpfLabel">CPF: </label>                           
                             <input type="text" className="cpf" name="cpf" style={{width: "130px"}} required maxLength="14" placeholder="xxx.xxx.xxx-xx" />                         
-                            <label className="dataNascLabel" >Data Nasc.: </label>
+                            <label className="dataNascLabel" >Data Nascimento: </label>
                             <input type="date" className="dateNasc" style={{width: "160px"}} name="date" required/>
                             <label className="sexoLabel">Sexo: </label>
                             <input className="sexo" type="radio" value="Male" name="gender"/>M
@@ -66,6 +66,28 @@ export default class NovoPaciente extends Component {
                             <input type="text" className="cidade" name="cidade" required />
                             <label className="ufLabel">UF: </label>
                             <input type="text" style={{width: "30px"}} className="uf" name="uf" required maxLength="2"/>
+                            <label className="telLabel">Tel:</label>
+                            <input type="text" style={{width: "30px"}} className="ddd" name="ddd" required maxLength="2" />
+                            <input type="text" style={{width: "95px"}} className="tel" name="tel" required maxLength="9" />
+                            <label className="telLabel">Cel:</label>
+                            <input type="text" style={{width: "30px"}} className="ddd" name="ddd" required maxLength="2" />
+                            <input type="text" style={{width: "105px"}} className="cel" name="cel" required maxLength="10"/>
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-group8">
+                            <label className="respLabel">Responsável:</label>
+                            <input type="text" style={{width: "100%"}} className="resp" name="resp" />
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-group9">
+                            <label className="convenioLabel">Convênio:</label>
+                            <input type="text" style={{width: "50"}} className="convenio" name="convenio" />
+                            <label className="matriculaLabel">Matrícula:</label>
+                            <input type="text" style={{width: "50"}} className="matricula" name="matricula" maxLength="20" />
+                            <label className="vencimentoLabel">Vencimento:</label>
+                            <input type="date" style={{width: "160px"}} className="vencimento" name="venciomento" />
                         </div>
                     </div>
                 </div>

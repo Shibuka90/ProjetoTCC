@@ -258,7 +258,7 @@
     font-weight: 500; 
 }
 
-.form-group6{
+.form-group7{
     margin: 0 0 10px 0;
     padding: 0 10px 0 0;
     display: flex;
@@ -280,7 +280,65 @@
     font-weight: 500; 
 }
 
+.uf{
+    margin: 0 12px 0 0;
+}
 
+.telLabel{
+    margin: 0 5px 0 0;
+    font-weight: 500; 
+}
+
+.ddd{
+    margin: 0 5px 0 0;
+}
+
+.tel{
+    margin: 0 20px 0 0;
+}
+
+.form-group8{
+    margin: 0 0 10px 0;
+    padding: 0 10px 0 0;
+    display: flex;
+    align-items: center; 
+    font-size: 1em;  
+}
+
+.respLabel{
+    margin: 0 5px 0 0;
+    font-weight: 500; 
+}
+
+.form-group9{
+    margin: 0 0 10px 0;
+    padding: 0 10px 0 0;
+    display: flex;
+    align-items: center; 
+    font-size: 1em;  
+}
+
+.convenioLabel{
+    margin: 0 5px 0 0;
+    font-weight: 500; 
+}
+
+.convenio{
+    margin: 0 12px 0 0;
+}
+.matriculaLabel{
+    margin: 0 5px 0 0;
+    font-weight: 500; 
+}
+
+.matricula{
+    margin: 0 12px 0 0;
+}
+
+.vencimentoLabel{
+    margin: 0 5px 0 0;
+    font-weight: 500; 
+}
 
 
 
