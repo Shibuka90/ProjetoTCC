@@ -21,6 +21,6 @@ export default props =>
         <Route path='/convenios' component={Convenios} />    
         <Route path='/especialidades' component={Especialidades} />     
         <Route path='/servicos' component={Servicos} />     
-        <Route path='/usuarios' component={Usuarios} />     
+        <Route path='/usuarios' component={Usuarios} />  
         <Redirect from='*' to='/' />
     </Switch>

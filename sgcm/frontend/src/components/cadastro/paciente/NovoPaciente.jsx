@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Main from "../../template/Main";
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import Nav from "../../template/Nav";
 import Header from "../../template/Header";
 import InputMask  from 'react-input-mask'
@@ -11,6 +11,20 @@ const headerProps = {
 }
 
 export default class NovoPaciente extends Component {
+    state = {
+        redirect: false
+    }
+
+    setRedirect = () => {
+        this.setState({
+            redirect: true
+        })
+    }
+    renderRedirect = () => {
+        if (this.state.redirect){
+            return <Redirect to='/pacientes' />
+        }
+    }
 
     renderForm() {
         return(
@@ -24,6 +38,8 @@ export default class NovoPaciente extends Component {
                     </div>
                     <div className="col-12">
                         <div className="form-group2">
+                            <label className="emailLabel">E-mail</label>
+                            <input type="email" className="email" name="email" placeholder="Digite e-mail...." />
                             <label className="cpfLabel">CPF: </label>  
                             <InputMask mask={"999.999.999-99"} className="cpf" name="cpf" placeholder="xxx.xxxx.xxx-xx" required style={{width:"130px"}}/>
                             <label className="dataNascLabel" >Data Nascimento: </label>
@@ -36,13 +52,13 @@ export default class NovoPaciente extends Component {
                     <div className="col-12">
                         <div className="form-group3">
                             <label className="maeLabel">Mãe:</label>
-                            <input type="text" style={{width: "100%"}} name="mae" required  placeholder="Digite no nome..."/>
+                            <input type="text" style={{width: "100%"}} name="mae" required  placeholder="Digite o nome..."/>
                         </div>
                     </div>
                     <div className="col-12">
                         <div className="form-group4">
                             <label className="paiLabel">Pai:</label>
-                            <input type="text" style={{width: "100%"}} name="pai" required  placeholder="Digite no nome..."/>
+                            <input type="text" style={{width: "100%"}} name="pai" required  placeholder="Digite o nome..."/>
                         </div>
                     </div>
                     <div className="col-12">
@@ -56,39 +72,45 @@ export default class NovoPaciente extends Component {
                     <div className="col-12">
                         <div className="form-group6">
                             <label className="numeroLabel">Nº</label>
-                            <input type="text" style={{width: "50px"}} className="numero" name="numero" required maxLength="4"/>
+                            <input type="text" style={{width: "50px"}} className="numero" name="numero" required maxLength="4" placeholder="xxxx"/>
                             <label className="bairroLabel">Bairro:</label>
-                            <input type="text" style={{width: "100%"}} className="bairro" name="bairro" required />
+                            <input type="text" style={{width: "100%"}} className="bairro" name="bairro" required placeholder="Digite o bairro..."/>
                         </div>
                     </div>
                     <div className="col-12">
                         <div className="form-group7">
                             <label className="cidadeLabel">Cidade: </label>
-                            <input type="text" className="cidade" name="cidade" required />
+                            <input type="text" className="cidade" name="cidade" required placeholder="Digite a cidade...."/>
                             <label className="ufLabel">UF: </label>
-                            <input type="text" style={{width: "30px"}} className="uf" name="uf" required maxLength="2"/>
+                            <input type="text" style={{width: "30px"}} className="uf" name="uf" required maxLength="2" placeholder="xx"/>
                             <label className="telLabel">Tel:</label>
-                            <InputMask mask={"(99)"} style={{width: "40px"}} className="ddd" name="ddd" required />
-                            <InputMask mask={"9999-9999"} style={{width: "95px"}} className="tel" name="tel" required />
+                            <InputMask mask={"(99)"} style={{width: "40px"}} className="ddd" name="ddd" required placeholder="xx"/>
+                            <InputMask mask={"9999-9999"} style={{width: "95px"}} className="tel" name="tel" required placeholder="xxxx-xxxx"/>
                             <label className="telLabel">Cel:</label>
-                            <InputMask mask={"(99)"} style={{width: "40px"}} className="ddd" name="ddd" required />
-                            <InputMask mask={"99999-9999"} style={{width: "105px"}} className="cel" name="cel" required/>
+                            <InputMask mask={"(99)"} style={{width: "40px"}} className="ddd" name="ddd" required placeholder="xx"/>
+                            <InputMask mask={"99999-9999"} style={{width: "105px"}} className="cel" name="cel" required placeholder="xxxxx-xxxx"/>
                         </div>
                     </div>
                     <div className="col-12">
                         <div className="form-group8">
                             <label className="respLabel">Responsável:</label>
-                            <input type="text" style={{width: "100%"}} className="resp" name="resp" />
+                            <input type="text" style={{width: "100%"}} className="resp" name="resp" placeholder="Digite o responsável...."/>
                         </div>
                     </div>
                     <div className="col-12">
                         <div className="form-group9">
                             <label className="convenioLabel">Convênio:</label>
-                            <input type="text" style={{width: "50"}} className="convenio" name="convenio" />
+                            <input type="text" style={{width: "50"}} className="convenio" name="convenio" placeholder="Digite o convênio...."/>
                             <label className="matriculaLabel">Matrícula:</label>
-                            <input type="text" style={{width: "50"}} className="matricula" name="matricula" maxLength="20" />
+                            <input type="text" style={{width: "50"}} className="matricula" name="matricula" maxLength="20" placeholder="xxxxxxxxxxxxxxxxxxx"/>
                             <label className="vencimentoLabel">Vencimento:</label>
                             <input type="date" style={{width: "160px"}} className="vencimento" name="venciomento" />
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-group10">
+                            <button className="botaoIncluir">Incluir</button>
+                            <button className="botaoCancelar" onClick={this.setRedirect}>Cancelar</button>
                         </div>
                     </div>
                 </div>
@@ -98,7 +120,8 @@ export default class NovoPaciente extends Component {
     render() {
         return (
             <React.Fragment>
-                 <Main>                 
+                 <Main>                
+                     {this.renderRedirect()} 
                     {this.renderForm()}
                 </Main>
                <Nav>

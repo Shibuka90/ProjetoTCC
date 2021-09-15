@@ -130,6 +130,7 @@
     font-size: 1.2em;
     background-color: white;
     font-weight: 500;
+    border-radius: 3px;
 }
 
 .botaoExcluir{
@@ -138,9 +139,10 @@
     background-color: red;
     color: white;
     font-weight: 500;
+    border-radius: 3px;
 }
 .form-group1{
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0 10px 0 0;
     display: flex;
     align-items: center; 
@@ -152,20 +154,29 @@
 }
 
 .form-group2{
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0 10px 0 0;
     display: flex;
     align-items: center; 
     font-size: 1em;  
 }
 
+.emailLabel{
+    margin: 0 15px 0 0;
+    font-weight: 500;
+}
+
+.email{
+    margin: 0 10px 0 0;
+}
+
 .sexoLabel{
-    margin: 0 10px 0 50px;
+    margin: 0 10px 0 0;
     font-weight: 500;
 }
 
 .sexo{
-    margin: 0 0 0 10px;
+    margin: 0 5px 0 10px;
     font-weight: 500;
 }
 
@@ -175,12 +186,12 @@
 }
 
 .cpfLabel{
-    margin: 0 30px 0 0;
+    margin: 0 10px 0 0;
     font-weight: 500; 
 }
 
 .cpf{
-    margin: 0 28px 0 0;
+    margin: 0 10px 0 0;
     
 }
 
@@ -189,7 +200,7 @@
 }
 
 .form-group3{
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0 10px 0 0;
     display: flex;
     align-items: center; 
@@ -202,7 +213,7 @@
 }
 
 .form-group4{
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0 10px 0 0;
     display: flex;
     align-items: center; 
@@ -215,7 +226,7 @@
 }
 
 .form-group5{
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0 10px 0 0;
     display: flex;
     align-items: center; 
@@ -237,7 +248,7 @@
 }
 
 .form-group6{
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0 10px 0 0;
     display: flex;
     align-items: center; 
@@ -259,7 +270,7 @@
 }
 
 .form-group7{
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0 10px 0 0;
     display: flex;
     align-items: center; 
@@ -298,7 +309,7 @@
 }
 
 .form-group8{
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0 10px 0 0;
     display: flex;
     align-items: center; 
@@ -311,7 +322,7 @@
 }
 
 .form-group9{
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0 10px 0 0;
     display: flex;
     align-items: center; 
@@ -340,5 +351,29 @@
     font-weight: 500; 
 }
 
+.form-group10{
+    margin: 0 10px 20px 0;
+    padding: 0 10px 0 0;
+    display: flex;
+    justify-content: end;
+    align-items: center; 
+    font-size: 1em;  
+}
 
+.botaoIncluir{
+    margin: 0 10px 10px 0;
+    background-color: green;
+    color: white;
+    border-radius: 3px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
 
+.botaoCancelar{
+    margin: 0 10px 10px 0;
+    background-color: lightgray;
+    color: black;
+    border-radius: 3px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
