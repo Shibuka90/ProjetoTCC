@@ -3,6 +3,7 @@ import Main from "../../template/Main";
 import { Link } from 'react-router-dom'
 import Nav from "../../template/Nav";
 import Header from "../../template/Header";
+import InputMask  from 'react-input-mask'
 
 const headerProps = {
     icon: 'user',
@@ -23,8 +24,8 @@ export default class NovoPaciente extends Component {
                     </div>
                     <div className="col-12">
                         <div className="form-group2">
-                            <label className="cpfLabel">CPF: </label>                           
-                            <input type="text" className="cpf" name="cpf" style={{width: "130px"}} required maxLength="14" placeholder="xxx.xxx.xxx-xx" />                         
+                            <label className="cpfLabel">CPF: </label>  
+                            <InputMask mask={"999.999.999-99"} className="cpf" name="cpf" placeholder="xxx.xxxx.xxx-xx" required style={{width:"130px"}}/>
                             <label className="dataNascLabel" >Data Nascimento: </label>
                             <input type="date" className="dateNasc" style={{width: "160px"}} name="date" required/>
                             <label className="sexoLabel">Sexo: </label>
@@ -47,7 +48,7 @@ export default class NovoPaciente extends Component {
                     <div className="col-12">
                         <div className="form-group5">
                             <label className="cepLabel">CEP: </label>
-                            <input type="text" style={{width: "90px"}} className="cep" name="cep" required maxLength="9" placeholder="xxxxx-xxx" />
+                            <InputMask mask={"99999-999"} style={{width: "90px"}} className="cep" name="cep" required placeholder="xxxxx-xxx" />
                             <label className="enderecoLabel">Endereço: </label>
                             <input type="text" style={{width: "100%"}} name="endereco" required placeholder="Digite o endereço....." />
                         </div>
@@ -67,11 +68,11 @@ export default class NovoPaciente extends Component {
                             <label className="ufLabel">UF: </label>
                             <input type="text" style={{width: "30px"}} className="uf" name="uf" required maxLength="2"/>
                             <label className="telLabel">Tel:</label>
-                            <input type="text" style={{width: "30px"}} className="ddd" name="ddd" required maxLength="2" />
-                            <input type="text" style={{width: "95px"}} className="tel" name="tel" required maxLength="9" />
+                            <InputMask mask={"(99)"} style={{width: "40px"}} className="ddd" name="ddd" required />
+                            <InputMask mask={"9999-9999"} style={{width: "95px"}} className="tel" name="tel" required />
                             <label className="telLabel">Cel:</label>
-                            <input type="text" style={{width: "30px"}} className="ddd" name="ddd" required maxLength="2" />
-                            <input type="text" style={{width: "105px"}} className="cel" name="cel" required maxLength="10"/>
+                            <InputMask mask={"(99)"} style={{width: "40px"}} className="ddd" name="ddd" required />
+                            <InputMask mask={"99999-9999"} style={{width: "105px"}} className="cel" name="cel" required/>
                         </div>
                     </div>
                     <div className="col-12">
