@@ -5,12 +5,12 @@ import Nav from "../../template/Nav";
 import Header from "../../template/Header";
 import InputMask  from 'react-input-mask'
 
-const headerProps = {
-    icon: 'user',
-    title: "Cadastros de Pacientes",
+const headerProps ={
+    icon: 'user-md',
+    title: "Cadastros de Médicos"
 }
 
-export default class NovoPaciente extends Component {
+export default class NovoMedico extends Component {
     state = {
         redirect: false
     }
@@ -22,18 +22,19 @@ export default class NovoPaciente extends Component {
     }
     renderRedirect = () => {
         if (this.state.redirect){
-            return <Redirect to='/pacientes' />
+            return <Redirect to='/medicos' />
         }
     }
 
-    renderForm() {
+    renderForm()
+    {
         return(
             <div className="form">
                 <div className="row">
-                    <div className="col-12 ">
+                    <div className="col-12">
                         <div className="form-group1">
-                            <label className="nomeLabel">Nome: </label>
-                            <input type="text" className="nome" style={{width: "100%"}} name="name" placeholder="Digite o nome....." required />                            
+                            <label className="nomeLabel">Nome:</label>
+                            <input type="text" className="nome" style={{width: "100%"}} name="name" placeholder="Digite o nome....." required />
                         </div>
                     </div>
                     <div className="col-12">
@@ -51,14 +52,11 @@ export default class NovoPaciente extends Component {
                     </div>
                     <div className="col-12">
                         <div className="form-group3">
-                            <label className="maeLabel">Mãe:</label>
-                            <input type="text" style={{width: "100%"}} name="mae" required  placeholder="Digite o nome..."/>
-                        </div>
-                    </div>
-                    <div className="col-12">
-                        <div className="form-group4">
-                            <label className="paiLabel">Pai:</label>
-                            <input type="text" style={{width: "100%"}} name="pai" required  placeholder="Digite o nome..."/>
+                            <label className="especialidadeLabel">Especialidade:</label>
+                            <input type="text" className="especialidade" name="especialidade " placeholder="Digite a especialidade..." required style={{width: "343px"}} />
+                            <label className="crmLabel">CRM:</label>
+                            <input type="text" className="crm" name="crm" placeholder="xxxxxxxxxx" required style={{width: "120px"}} maxLength="10" />
+                        
                         </div>
                     </div>
                     <div className="col-12">
@@ -94,22 +92,6 @@ export default class NovoPaciente extends Component {
                         </div>
                     </div>
                     <div className="col-12">
-                        <div className="form-group8">
-                            <label className="respLabel">Responsável:</label>
-                            <input type="text" style={{width: "100%"}} className="resp" name="resp" placeholder="Digite o responsável...."/>
-                        </div>
-                    </div>
-                    <div className="col-12">
-                        <div className="form-group9">
-                            <label className="convenioLabel">Convênio:</label>
-                            <input type="text" style={{width: "50"}} className="convenio" name="convenio" placeholder="Digite o convênio...."/>
-                            <label className="matriculaLabel">Matrícula:</label>
-                            <input type="text" style={{width: "50"}} className="matricula" name="matricula" maxLength="20" placeholder="xxxxxxxxxxxxxxxxxxx"/>
-                            <label className="vencimentoLabel">Vencimento:</label>
-                            <input type="date" style={{width: "160px"}} className="vencimento" name="venciomento" />
-                        </div>
-                    </div>
-                    <div className="col-12">
                         <div className="form-group10">
                             <button className="botaoIncluir">Incluir</button>
                             <button className="botaoCancelar" onClick={this.setRedirect}>Cancelar</button>
@@ -118,13 +100,14 @@ export default class NovoPaciente extends Component {
                 </div>
             </div>
         )
-    }      
+    }
+
     render() {
         return (
             <React.Fragment>
-                 <Main>                
-                     {this.renderRedirect()} 
-                    {this.renderForm()}
+                 <Main> 
+                     {this.renderRedirect()}               
+                     {this.renderForm()}
                 </Main>
                <Nav>
                     <aside className="menu-area">

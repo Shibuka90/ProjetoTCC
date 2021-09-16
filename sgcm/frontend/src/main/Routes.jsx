@@ -10,6 +10,7 @@ import Convenios from "../components/cadastro/convenio/Convenios";
 import Especialidades from "../components/cadastro/especialidade/Especialidades";
 import Servicos from "../components/cadastro/servico/Servicos";
 import Usuarios from "../components/cadastro/usuario/Usuarios";
+import NovoMedico from "../components/cadastro/medico/NovoMedico";
 
 export default props =>
     <Switch>
@@ -17,7 +18,8 @@ export default props =>
         <Route path='/cadastro' component={HomeCadastro} /> 
         <Route path='/pacientes' component={Pacientes}/> 
         <Route path='/novopaciente' component={NovoPaciente}/>         
-        <Route path='/medicos' component={Medicos} />    
+        <Route path='/medicos' component={Medicos} />
+        <Route path="/novomedico" component={NovoMedico} />    
         <Route path='/convenios' component={Convenios} />    
         <Route path='/especialidades' component={Especialidades} />     
         <Route path='/servicos' component={Servicos} />     

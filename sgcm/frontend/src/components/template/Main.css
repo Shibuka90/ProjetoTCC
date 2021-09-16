@@ -162,7 +162,7 @@
 }
 
 .emailLabel{
-    margin: 0 15px 0 0;
+    margin: 0 12px 0 0;
     font-weight: 500;
 }
 
@@ -212,6 +212,20 @@
     font-weight: 500; 
 }
 
+.especialidadeLabel{
+    margin: 0 12px 0 0;
+    font-weight: 500; 
+}
+
+.especialidade{
+    margin: 0 10px 0 0;
+}
+
+.crmLabel{
+    margin: 0 10px 0 0;
+    font-weight: 500; 
+}
+
 .form-group4{
     margin: 0 0 20px 0;
     padding: 0 10px 0 0;
@@ -241,6 +255,15 @@
     margin: 0 28px 0 0;
     font-weight: 500; 
 } 
+
+.tipoLabel{
+    margin: 0 10px 0 0;
+    font-weight: 500; 
+}
+
+.tipo{
+    margin: 0 12px 0 0;
+}
 
 .enderecoLabel{
     margin: 0 10px 0 0;
