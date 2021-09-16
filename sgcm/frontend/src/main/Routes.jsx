@@ -8,6 +8,7 @@ import NovoPaciente from "../components/cadastro/paciente/NovoPaciente"
 import Medicos from "../components/cadastro/medico/Medicos";
 import Convenios from "../components/cadastro/convenio/Convenios";
 import Especialidades from "../components/cadastro/especialidade/Especialidades";
+import NovaEspecialidade from "../components/cadastro/especialidade/NovaEspecialidade";
 import Servicos from "../components/cadastro/servico/Servicos";
 import Usuarios from "../components/cadastro/usuario/Usuarios";
 import NovoMedico from "../components/cadastro/medico/NovoMedico";
@@ -21,7 +22,8 @@ export default props =>
         <Route path='/medicos' component={Medicos} />
         <Route path="/novomedico" component={NovoMedico} />    
         <Route path='/convenios' component={Convenios} />    
-        <Route path='/especialidades' component={Especialidades} />     
+        <Route path='/especialidades' component={Especialidades} /> 
+        <Route path='/novaespecialidade' component={NovaEspecialidade} />    
         <Route path='/servicos' component={Servicos} />     
         <Route path='/usuarios' component={Usuarios} />  
         <Redirect from='*' to='/' />

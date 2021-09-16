@@ -3,72 +3,19 @@ import Main from "../../template/Main";
 import { Link, Redirect } from 'react-router-dom'
 import Nav from "../../template/Nav";
 import Header from "../../template/Header";
+import InputMask  from 'react-input-mask'
 
-const headerProps = {
+const headerProps ={
     icon: 'stethoscope',
     title: "Cadastros de Especialidades",
 }
 
-export default class Especialidades extends Component {
-    state = {
-        redirect: false
-    }
-
-    setRedirect = () => {
-        this.setState({
-            redirect: true
-        })
-    }
-    renderRedirect = () => {
-        if (this.state.redirect){
-            return <Redirect to='/novaespecialidade' />
-        }
-    }
-
-    renderButton() {
-        return(
-            <div className="rowButton">                
-                <div className="col-12 d-flex justify-content-end">
-                    <button className="botaoNovo" onClick={this.setRedirect}>Novo</button>             
-                    <button className="botaoExcluir">Excluir</button>
-                </div>
-            </div>
-        )
-    }
-    renderTable() {
-        return(
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Especialidade</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Otorrino</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Urologia</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Clinica Geral</td>
-                    </tr>
-                </tbody>
-            </table>
-        )
-    }
+export default class NovaEspecialidade extends Component{
     render() {
         return (
             <React.Fragment>
-                 <Main>
-                     {this.renderRedirect()}
-                     {this.renderButton()}
-                     {this.renderTable()}
+                 <Main> 
+                     
                 </Main>
                <Nav>
                     <aside className="menu-area">
