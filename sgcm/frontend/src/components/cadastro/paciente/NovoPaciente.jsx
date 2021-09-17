@@ -44,6 +44,8 @@ export default class NovoPaciente extends Component {
                             <InputMask mask={"999.999.999-99"} className="cpf" name="cpf" placeholder="xxx.xxxx.xxx-xx" required style={{width:"130px"}}/>
                             <label className="dataNascLabel" >Data Nascimento: </label>
                             <input type="date" className="dateNasc" style={{width: "160px"}} name="date" required/>
+                            <label className="estadoCivilLabel">Estado Civil:</label>
+                            <input type="text" className="estadoCivil" name="estadoCivil" style={{width: "130px"}} />
                             <label className="sexoLabel">Sexo: </label>
                             <input className="sexo" type="radio" value="Male" name="gender"/>M
                             <input className="sexo" type="radio" value="Female" name="gender"/>F

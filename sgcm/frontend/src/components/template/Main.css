@@ -227,6 +227,15 @@
     margin: 0 10px 0 0;
 }
 
+.estadoCivilLabel{
+    margin: 0 10px 0 0;
+    font-weight: 500; 
+}
+
+.estadoCivil{
+    margin: 0 10px 0 0;
+}
+
 .form-group3{
     margin: 0 0 20px 0;
     padding: 0 10px 0 0;
@@ -296,6 +305,24 @@
 .enderecoLabel{
     margin: 0 10px 0 0;
     font-weight: 500;
+}
+
+.cargoLabel{
+    margin: 0 16px 0 0;
+    font-weight: 500;
+}
+
+.cargo{
+    margin: 0 12px 0 0;
+}
+
+.siglaLabel{
+    margin: 0 16px 0 0;
+    font-weight: 500;
+}
+
+.sigla{
+    margin: 0 12px 0 0;
 }
 
 .form-group6{

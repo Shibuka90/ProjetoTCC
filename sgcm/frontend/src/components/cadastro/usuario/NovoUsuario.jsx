@@ -7,7 +7,7 @@ import InputMask  from 'react-input-mask'
 
 const headerProps = {
     icon: 'users',
-    title: "Cadastros de Usuários",
+    title: "Cadastros de Colaboradores",
 }
 
 export default class NovoUsuario extends Component {
@@ -44,25 +44,25 @@ export default class NovoUsuario extends Component {
                             <InputMask mask={"999.999.999-99"} className="cpf" name="cpf" placeholder="xxx.xxxx.xxx-xx" required style={{width:"130px"}}/>
                             <label className="dataNascLabel" >Data Nascimento: </label>
                             <input type="date" className="dateNasc" style={{width: "160px"}} name="date" required/>
+                            <label className="estadoCivilLabel">Estado Civil:</label>
+                            <input type="text" className="estadoCivil" style={{width: "130px"}} required/>
                             <label className="sexoLabel">Sexo: </label>
                             <input className="sexo" type="radio" value="Male" name="gender"/>M
                             <input className="sexo" type="radio" value="Female" name="gender"/>F
                         </div>
                     </div>
                     <div className="col-12">
-                        <div className="form-group3">
-                            <label className="maeLabel">Mãe:</label>
-                            <input type="text" style={{width: "100%"}} name="mae" required  placeholder="Digite o nome..."/>
-                        </div>
-                    </div>
-                    <div className="col-12">
-                        <div className="form-group4">
-                            <label className="paiLabel">Pai:</label>
-                            <input type="text" style={{width: "100%"}} name="pai" required  placeholder="Digite o nome..."/>
-                        </div>
-                    </div>
-                    <div className="col-12">
                         <div className="form-group5">
+                            <label className="cargoLabel">Cargo:</label>
+                            <input type="text" className="cargo" name="cargo" placeholder="Digite o cargo....." style={{width: "400px"}}/>
+                            <label className="siglaLabel">Sigla CR.:</label>
+                            <input type="text" className="sigla" name="sigla" style={{width: "226px"}}/>
+                            <label className="ufLabel">UF: </label>
+                            <input type="text" style={{width: "30px"}} className="uf" name="uf" required maxLength="2" placeholder="xx"/>
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-group6">
                             <label className="cepLabel">CEP: </label>
                             <InputMask mask={"99999-999"} style={{width: "90px"}} className="cep" name="cep" required placeholder="xxxxx-xxx" />
                             <label className="tipoLabel">Tipo:</label>
@@ -72,7 +72,7 @@ export default class NovoUsuario extends Component {
                         </div>
                     </div>
                     <div className="col-12">
-                        <div className="form-group6">
+                        <div className="form-group7">
                             <label className="numeroLabel">Nº</label>
                             <input type="text" style={{width: "50px"}} className="numero" name="numero" required maxLength="4" placeholder="xxxx"/>
                             <label className="bairroLabel">Bairro:</label>
@@ -80,7 +80,7 @@ export default class NovoUsuario extends Component {
                         </div>
                     </div>
                     <div className="col-12">
-                        <div className="form-group7">
+                        <div className="form-group8">
                             <label className="cidadeLabel">Cidade: </label>
                             <input type="text" className="cidade" name="cidade" required placeholder="Digite a cidade...."/>
                             <label className="ufLabel">UF: </label>
@@ -91,22 +91,6 @@ export default class NovoUsuario extends Component {
                             <label className="telLabel">Cel:</label>
                             <InputMask mask={"(99)"} style={{width: "40px"}} className="ddd" name="ddd" required placeholder="xx"/>
                             <InputMask mask={"99999-9999"} style={{width: "105px"}} className="cel" name="cel" required placeholder="xxxxx-xxxx"/>
-                        </div>
-                    </div>
-                    <div className="col-12">
-                        <div className="form-group8">
-                            <label className="respLabel">Responsável:</label>
-                            <input type="text" style={{width: "100%"}} className="resp" name="resp" placeholder="Digite o responsável...."/>
-                        </div>
-                    </div>
-                    <div className="col-12">
-                        <div className="form-group9">
-                            <label className="convenioLabel">Convênio:</label>
-                            <input type="text" style={{width: "50"}} className="convenio" name="convenio" placeholder="Digite o convênio...."/>
-                            <label className="matriculaLabel">Matrícula:</label>
-                            <input type="text" style={{width: "50"}} className="matricula" name="matricula" maxLength="20" placeholder="xxxxxxxxxxxxxxxxxxx"/>
-                            <label className="vencimentoLabel">Vencimento:</label>
-                            <input type="date" style={{width: "160px"}} className="vencimento" name="venciomento" />
                         </div>
                     </div>
                     <div className="col-12">
