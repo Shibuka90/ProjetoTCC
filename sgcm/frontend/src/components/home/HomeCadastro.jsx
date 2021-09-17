@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Nav from "../template/Nav";
 import { Link } from 'react-router-dom'
 import Header from "../template/Header";
-import Main from "../template/Main";
+
 
 const headerProps = {
     icon:"folder",
