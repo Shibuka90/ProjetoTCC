@@ -153,6 +153,34 @@
     font-weight: 500;
 }
 
+.especialidadeLabel2{
+    margin: 0 12px 0 10px;
+    font-weight: 500; 
+}
+
+.especialidade2{
+    margin: 0 50px 0 10px;
+    
+}
+.convenioLabel2{
+    margin: 0 12px 0 10px;
+    font-weight: 500; 
+}
+
+.convenio2{
+    margin: 0 50px 0 10px;
+    
+}
+.servicoLabel{
+    margin: 0 12px 0 10px;
+    font-weight: 500; 
+}
+
+.servico{
+    margin: 0 50px 0 10px;
+    
+}
+
 .form-group2{
     margin: 0 0 20px 0;
     padding: 0 10px 0 0;
@@ -400,3 +428,13 @@
     font-size: 1.2em;
     font-weight: 500;
 }
+
+.botaoExcluir1{
+    margin: 0 10px 10px 0;
+    font-size: 1.2em;
+    background-color: red;
+    color: white;
+    font-weight: 500;
+    border-radius: 3px;
+}
+

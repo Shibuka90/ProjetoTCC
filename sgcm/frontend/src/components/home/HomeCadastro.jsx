@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Nav from "../template/Nav";
 import { Link } from 'react-router-dom'
 import Header from "../template/Header";
+import Main from "../template/Main";
 
 const headerProps = {
     icon:"folder",
@@ -11,8 +12,8 @@ const headerProps = {
 export default class HomeCadastro extends Component {
     render() {
         return (
-            <React.Fragment>
-                <Nav {...headerProps}>
+            <React.Fragment>          
+                <Nav>
                     <aside className="menu-area">
                         <nav className="menu-nav">
                             <Link to="/">
@@ -38,7 +39,8 @@ export default class HomeCadastro extends Component {
                             </Link>
                         </nav>
                     </aside>
-                </Nav>
+                </Nav>               
+                <Header {...headerProps} />
             </React.Fragment>
 
         )

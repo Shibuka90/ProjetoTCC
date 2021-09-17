@@ -6,12 +6,12 @@ import HomeCadastro from "../components/home/HomeCadastro";
 import Pacientes from "../components/cadastro/paciente/Pacientes";
 import NovoPaciente from "../components/cadastro/paciente/NovoPaciente"
 import Medicos from "../components/cadastro/medico/Medicos";
+import NovoMedico from "../components/cadastro/medico/NovoMedico";
 import Convenios from "../components/cadastro/convenio/Convenios";
 import Especialidades from "../components/cadastro/especialidade/Especialidades";
-import NovaEspecialidade from "../components/cadastro/especialidade/NovaEspecialidade";
 import Servicos from "../components/cadastro/servico/Servicos";
 import Usuarios from "../components/cadastro/usuario/Usuarios";
-import NovoMedico from "../components/cadastro/medico/NovoMedico";
+import NovoUsuario from "../components/cadastro/usuario/NovoUsuario";
 
 export default props =>
     <Switch>
@@ -22,9 +22,9 @@ export default props =>
         <Route path='/medicos' component={Medicos} />
         <Route path="/novomedico" component={NovoMedico} />    
         <Route path='/convenios' component={Convenios} />    
-        <Route path='/especialidades' component={Especialidades} /> 
-        <Route path='/novaespecialidade' component={NovaEspecialidade} />    
+        <Route path='/especialidades' component={Especialidades} />          
         <Route path='/servicos' component={Servicos} />     
         <Route path='/usuarios' component={Usuarios} />  
+        <Route path='/novousuario' component={NovoUsuario} />  
         <Redirect from='*' to='/' />
     </Switch>

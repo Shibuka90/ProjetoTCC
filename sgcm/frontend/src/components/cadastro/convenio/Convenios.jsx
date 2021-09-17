@@ -10,12 +10,18 @@ const headerProps = {
 }
 
 export default class Convenios extends Component {
-    renderButton() {
+  
+    renderForm(){
         return(
-            <div className="rowButton">                
-                <div className="col-12 d-flex">
-                    <button className="botaoNovo">Novo</button>             
-                    <button className="botaoExcluir">Excluir</button>
+            <div className="form">
+                <div className="row">
+                    <div className="col-6" ></div>
+                    <div className="form-group1">
+                        <label className="convenioLabel2">Convênio:</label>
+                        <input type="text" className="convenio2" name="convenio2" placeholder="Digite o convênio...." style={{width: "50%"}} />
+                        <button className="botaoIncluir">Incluir</button>
+                        <button className="botaoExcluir1">Excluir</button>
+                    </div>
                 </div>
             </div>
         )
@@ -51,7 +57,7 @@ export default class Convenios extends Component {
         return (
             <React.Fragment>
                  <Main>
-                  {this.renderButton()}
+                  {this.renderForm()}
                   {this.renderTable()}
                 </Main>
                <Nav>

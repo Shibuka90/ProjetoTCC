@@ -5,17 +5,23 @@ import Nav from "../../template/Nav";
 import Header from "../../template/Header";
 
 const headerProps = {
-    icon: 'medikit',
+    icon: 'medkit',
     title: "Cadastros de Serviços",
 }
 
 export default class Servicos extends Component {
-    renderButton() {
+
+    renderForm(){
         return(
-            <div className="rowButton">                
-                <div className="col-12 d-flex">
-                    <button className="botaoNovo">Novo</button>             
-                    <button className="botaoExcluir">Excluir</button>
+            <div className="form">
+                <div className="row">
+                    <div className="col-6" ></div>
+                    <div className="form-group1">
+                        <label className="servicoLabel">Serviço:</label>
+                        <input type="text" className="servico" name="servico" placeholder="Digite o serviço...." style={{width: "50%"}} />
+                        <button className="botaoIncluir">Incluir</button>
+                        <button className="botaoExcluir1">Excluir</button>
+                    </div>
                 </div>
             </div>
         )
@@ -51,7 +57,7 @@ export default class Servicos extends Component {
         return (
             <React.Fragment>
                  <Main>
-                  {this.renderButton()}
+                  {this.renderForm()}
                   {this.renderTable()}
                 </Main>
                <Nav>

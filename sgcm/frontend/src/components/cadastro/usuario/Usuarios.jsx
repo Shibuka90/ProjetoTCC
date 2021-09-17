@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Main from "../../template/Main";
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import Nav from "../../template/Nav";
 import Header from "../../template/Header";
 
@@ -10,11 +10,26 @@ const headerProps = {
 }
 
 export default class Usuarios extends Component {
+    state = {
+        redirect: false
+    }
+
+    setRedirect = () => {
+        this.setState({
+            redirect: true
+        })
+    }
+    renderRedirect = () => {
+        if (this.state.redirect){
+            return <Redirect to='/novousuario' />
+        }
+    }
+
     renderButton() {
         return(
             <div className="rowButton">                
-                <div className="col-12 d-flex">
-                    <button className="botaoNovo">Novo</button>             
+                <div className="col-12 d-flex justify-content-end">
+                    <button className="botaoNovo" onClick={this.setRedirect}>Novo</button>             
                     <button className="botaoExcluir">Excluir</button>
                 </div>
             </div>
@@ -66,8 +81,9 @@ export default class Usuarios extends Component {
         return (
             <React.Fragment>
                  <Main>
-                  {this.renderButton()}
-                  {this.renderTable()}
+                     {this.renderRedirect()}
+                     {this.renderButton()}
+                     {this.renderTable()}
                 </Main>
                <Nav>
                     <aside className="menu-area">

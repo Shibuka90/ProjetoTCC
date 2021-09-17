@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Main from "../../template/Main";
-import { Link, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Nav from "../../template/Nav";
 import Header from "../../template/Header";
 
@@ -10,31 +10,23 @@ const headerProps = {
 }
 
 export default class Especialidades extends Component {
-    state = {
-        redirect: false
-    }
 
-    setRedirect = () => {
-        this.setState({
-            redirect: true
-        })
-    }
-    renderRedirect = () => {
-        if (this.state.redirect){
-            return <Redirect to='/novaespecialidade' />
-        }
-    }
-
-    renderButton() {
+    renderForm(){
         return(
-            <div className="rowButton">                
-                <div className="col-12 d-flex justify-content-end">
-                    <button className="botaoNovo" onClick={this.setRedirect}>Novo</button>             
-                    <button className="botaoExcluir">Excluir</button>
+            <div className="form">
+                <div className="row">
+                    <div className="col-6" ></div>
+                    <div className="form-group1">
+                        <label className="especialidadeLabel2">Especialidade:</label>
+                        <input type="text" className="especialidade2" name="especialidade2" placeholder="Digite a especialidade...." style={{width: "50%"}} />
+                        <button className="botaoIncluir">Incluir</button>
+                        <button className="botaoExcluir1">Excluir</button>
+                    </div>
                 </div>
             </div>
         )
     }
+    
     renderTable() {
         return(
             <table className="table">
@@ -65,9 +57,8 @@ export default class Especialidades extends Component {
     render() {
         return (
             <React.Fragment>
-                 <Main>
-                     {this.renderRedirect()}
-                     {this.renderButton()}
+                 <Main> 
+                     {this.renderForm()}                   
                      {this.renderTable()}
                 </Main>
                <Nav>
