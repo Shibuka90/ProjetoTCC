@@ -386,6 +386,10 @@
     margin: 0 20px 0 0;
 }
 
+.cel{
+    margin: 0 20px 0 0;
+}
+
 .form-group8{
     margin: 0 0 20px 0;
     padding: 0 10px 0 0;
@@ -397,6 +401,16 @@
 .respLabel{
     margin: 0 5px 0 0;
     font-weight: 500; 
+}
+
+.colaboradorLabel{
+    margin: 0 10px 0 0;
+    font-weight: 500;
+}
+
+.colaborador{
+    margin: 0 5px 0 10px;
+    font-weight: 500;
 }
 
 .form-group9{

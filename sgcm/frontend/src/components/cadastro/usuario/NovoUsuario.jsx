@@ -91,6 +91,9 @@ export default class NovoUsuario extends Component {
                             <label className="telLabel">Cel:</label>
                             <InputMask mask={"(99)"} style={{width: "40px"}} className="ddd" name="ddd" required placeholder="xx"/>
                             <InputMask mask={"99999-9999"} style={{width: "105px"}} className="cel" name="cel" required placeholder="xxxxx-xxxx"/>
+                            <label className="colaboradorLabel">Colaborador(a)/Gerente:</label>                           
+                            <input type="radio" className="colaborador" name="colaborador"  value="colaborador" style={{transform: "scale(1.5)"}}/>Colaborador(a)
+                            <input type="radio" className="colaborador" name="colaborador"  value="colaborador" style={{transform: "scale(1.5)"}}/>Gerente
                         </div>
                     </div>
                     <div className="col-12">
