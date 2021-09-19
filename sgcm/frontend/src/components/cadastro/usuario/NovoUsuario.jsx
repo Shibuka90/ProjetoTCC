@@ -45,7 +45,16 @@ export default class NovoUsuario extends Component {
                             <label className="dataNascLabel" >Data Nascimento: </label>
                             <input type="date" className="dateNasc" style={{width: "160px"}} name="date" required/>
                             <label className="estadoCivilLabel">Estado Civil:</label>
-                            <input type="text" className="estadoCivil" style={{width: "130px"}} required/>
+                            <select className="estadoCivil" name="estacoCivil" style={{transform: "scale(1.1)"}}>
+                                <option value="solteiro">Solteiro(a)</option>
+                                <option value="divorciado">Divorciado(a)</option>
+                                <option value="amasiado">Amasiado(a)</option>
+                                <option value="casado">Casado(a)</option>
+                                <option value="separado">Separado(a)</option>
+                                <option value="uniaoEstavel">Uniao Estavel</option>
+                                <option value="viuvo">Viuvo(a)</option>
+
+                            </select>
                             <label className="sexoLabel">Sexo: </label>
                             <input className="sexo" type="radio" value="Male" name="gender"/>M
                             <input className="sexo" type="radio" value="Female" name="gender"/>F
@@ -56,6 +65,11 @@ export default class NovoUsuario extends Component {
                             <label className="cargoLabel">Cargo:</label>
                             <input type="text" className="cargo" name="cargo" placeholder="Digite o cargo....." style={{width: "400px"}}/>
                             <label className="siglaLabel">Sigla CR.:</label>
+                            <select className="cr" name="cr" style={{transform: "scale(1.1)"}}>
+                                <option value="crm">CRM</option>
+                                <option value="coren">COREN</option>
+                                <option value="crefito">CREFITO</option>
+                            </select>
                             <input type="text" className="sigla" name="sigla" style={{width: "226px"}}/>
                             <label className="ufLabel">UF: </label>
                             <input type="text" style={{width: "30px"}} className="uf" name="uf" required maxLength="2" placeholder="xx"/>
