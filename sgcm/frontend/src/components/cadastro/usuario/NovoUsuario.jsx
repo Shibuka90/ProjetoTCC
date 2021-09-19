@@ -53,11 +53,10 @@ export default class NovoUsuario extends Component {
                                 <option value="separado">Separado(a)</option>
                                 <option value="uniaoEstavel">Uniao Estavel</option>
                                 <option value="viuvo">Viuvo(a)</option>
-
                             </select>
                             <label className="sexoLabel">Sexo: </label>
-                            <input className="sexo" type="radio" value="Male" name="gender"/>M
-                            <input className="sexo" type="radio" value="Female" name="gender"/>F
+                            <input className="sexo" type="radio" value="Male" name="gender" style={{transform: "scale(1.5)"}}/>M
+                            <input className="sexo" type="radio" value="Female" name="gender" style={{transform: "scale(1.5)"}}/>F
                         </div>
                     </div>
                     <div className="col-12">
@@ -72,7 +71,35 @@ export default class NovoUsuario extends Component {
                             </select>
                             <input type="text" className="sigla" name="sigla" style={{width: "226px"}}/>
                             <label className="ufLabel">UF: </label>
-                            <input type="text" style={{width: "30px"}} className="uf" name="uf" required maxLength="2" placeholder="xx"/>
+                            <select className="uf" name="uf" style={{transform: "scale(1.1)"}}>
+                                <option value="ac">AC</option>
+                                <option value="al">AL</option>
+                                <option value="ap">AP</option>
+                                <option value="am">AM</option>
+                                <option value="ba">BA</option>
+                                <option value="ce">CE</option>
+                                <option value="df">DF</option>
+                                <option value="es">ES</option>
+                                <option value="go">GO</option>
+                                <option value="ma">MA</option>
+                                <option value="mt">MT</option>
+                                <option value="ms">MS</option>
+                                <option value="mg">MG</option>
+                                <option value="pa">PA</option>
+                                <option value="pb">PB</option>
+                                <option value="pr">PR</option>
+                                <option value="pe">PE</option>
+                                <option value="pi">PI</option>
+                                <option value="rj">RJ</option>
+                                <option value="rn">RN</option>
+                                <option value="rs">RS</option>
+                                <option value="ro">RO</option>
+                                <option value="rr">RR</option>
+                                <option value="sc">SC</option>
+                                <option value="sp">SP</option>
+                                <option value="se">SE</option>
+                                <option value="to">TO</option>
+                            </select>
                         </div>
                     </div>
                     <div className="col-12">
@@ -80,7 +107,31 @@ export default class NovoUsuario extends Component {
                             <label className="cepLabel">CEP: </label>
                             <InputMask mask={"99999-999"} style={{width: "90px"}} className="cep" name="cep" required placeholder="xxxxx-xxx" />
                             <label className="tipoLabel">Tipo:</label>
-                            <input type="text" className="tipo" name="tipo" required style={{width: "90px"}} />
+                            <select className="uf" name="uf" style={{transform: "scale(1.1)"}}>
+                                <option value="avenida">Avenida</option>
+                                <option value="alameda">Alameda</option>
+                                <option value="chacara">Chacara</option>
+                                <option value="condominio">Condominio</option>
+                                <option value="conjunto">Conjunto</option>
+                                <option value="distrito">Distrito</option>
+                                <option value="estrada">Estrada</option>
+                                <option value="fazenda">Fazenda</option>
+                                <option value="ladeira">Ladeira</option>
+                                <option value="largo">Largo</option>
+                                <option value="loteamento">Loteamento</option>
+                                <option value="parque">Parque</option>
+                                <option value="praca">Praca</option>
+                                <option value="quadra">Quadra</option>
+                                <option value="residencial">Residencial</option>
+                                <option value="rua">Rua</option>
+                                <option value="sitio">Sitio</option>
+                                <option value="travessa">Travessa</option>
+                                <option value="trevo">Trevo</option>
+                                <option value="vale">Vale</option>
+                                <option value="via">Via</option>
+                                <option value="viela">Viela</option>
+                                <option value="vila">Vila</option>                                
+                            </select>
                             <label className="enderecoLabel">Endereço: </label>
                             <input type="text" style={{width: "100%"}} name="endereco" required placeholder="Digite o endereço....." />
                         </div>
@@ -98,7 +149,35 @@ export default class NovoUsuario extends Component {
                             <label className="cidadeLabel">Cidade: </label>
                             <input type="text" className="cidade" name="cidade" required placeholder="Digite a cidade...."/>
                             <label className="ufLabel">UF: </label>
-                            <input type="text" style={{width: "30px"}} className="uf" name="uf" required maxLength="2" placeholder="xx"/>
+                            <select className="uf" name="uf" style={{transform: "scale(1.1)"}}>
+                                <option value="ac">AC</option>
+                                <option value="al">AL</option>
+                                <option value="ap">AP</option>
+                                <option value="am">AM</option>
+                                <option value="ba">BA</option>
+                                <option value="ce">CE</option>
+                                <option value="df">DF</option>
+                                <option value="es">ES</option>
+                                <option value="go">GO</option>
+                                <option value="ma">MA</option>
+                                <option value="mt">MT</option>
+                                <option value="ms">MS</option>
+                                <option value="mg">MG</option>
+                                <option value="pa">PA</option>
+                                <option value="pb">PB</option>
+                                <option value="pr">PR</option>
+                                <option value="pe">PE</option>
+                                <option value="pi">PI</option>
+                                <option value="rj">RJ</option>
+                                <option value="rn">RN</option>
+                                <option value="rs">RS</option>
+                                <option value="ro">RO</option>
+                                <option value="rr">RR</option>
+                                <option value="sc">SC</option>
+                                <option value="sp">SP</option>
+                                <option value="se">SE</option>
+                                <option value="to">TO</option>
+                            </select>
                             <label className="telLabel">Tel:</label>
                             <InputMask mask={"(99)"} style={{width: "40px"}} className="ddd" name="ddd" required placeholder="xx"/>
                             <InputMask mask={"9999-9999"} style={{width: "95px"}} className="tel" name="tel" required placeholder="xxxx-xxxx"/>
