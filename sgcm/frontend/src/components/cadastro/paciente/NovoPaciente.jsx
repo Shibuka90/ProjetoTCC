@@ -79,8 +79,10 @@ export default class NovoPaciente extends Component {
                             <label className="tipoLabel">Tipo:</label>
                             <select className="uf" name="uf" style={{transform: "scale(1.1)"}}>
                                 <option value="vazio"></option>
+                                <option value="area">Area</option>
                                 <option value="avenida">Avenida</option>
                                 <option value="alameda">Alameda</option>
+                                <option value="beco">Beco</option>
                                 <option value="chacara">Chacara</option>
                                 <option value="condominio">Condominio</option>
                                 <option value="conjunto">Conjunto</option>
@@ -90,6 +92,7 @@ export default class NovoPaciente extends Component {
                                 <option value="ladeira">Ladeira</option>
                                 <option value="largo">Largo</option>
                                 <option value="loteamento">Loteamento</option>
+                                <option value="modulo">Modulo</option>
                                 <option value="parque">Parque</option>
                                 <option value="praca">Praca</option>
                                 <option value="quadra">Quadra</option>
