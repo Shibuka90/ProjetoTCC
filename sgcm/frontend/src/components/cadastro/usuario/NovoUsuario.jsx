@@ -46,6 +46,7 @@ export default class NovoUsuario extends Component {
                             <input type="date" className="dateNasc" style={{width: "160px"}} name="date" required/>
                             <label className="estadoCivilLabel">Estado Civil:</label>
                             <select className="estadoCivil" name="estacoCivil" style={{transform: "scale(1.1)"}}>
+                                <option value="vazio"></option>
                                 <option value="solteiro">Solteiro(a)</option>
                                 <option value="divorciado">Divorciado(a)</option>
                                 <option value="amasiado">Amasiado(a)</option>
@@ -65,6 +66,7 @@ export default class NovoUsuario extends Component {
                             <input type="text" className="cargo" name="cargo" placeholder="Digite o cargo....." style={{width: "400px"}}/>
                             <label className="siglaLabel">Sigla CR.:</label>
                             <select className="cr" name="cr" style={{transform: "scale(1.1)"}}>
+                                <option value="vazio"></option>
                                 <option value="crm">CRM</option>
                                 <option value="coren">COREN</option>
                                 <option value="crefito">CREFITO</option>
@@ -72,6 +74,7 @@ export default class NovoUsuario extends Component {
                             <input type="text" className="sigla" name="sigla" style={{width: "226px"}}/>
                             <label className="ufLabel">UF: </label>
                             <select className="uf" name="uf" style={{transform: "scale(1.1)"}}>
+                                <option value="vazio"></option>
                                 <option value="ac">AC</option>
                                 <option value="al">AL</option>
                                 <option value="ap">AP</option>
@@ -108,6 +111,7 @@ export default class NovoUsuario extends Component {
                             <InputMask mask={"99999-999"} style={{width: "90px"}} className="cep" name="cep" required placeholder="xxxxx-xxx" />
                             <label className="tipoLabel">Tipo:</label>
                             <select className="uf" name="uf" style={{transform: "scale(1.1)"}}>
+                                <option value="vazio"></option>
                                 <option value="avenida">Avenida</option>
                                 <option value="alameda">Alameda</option>
                                 <option value="chacara">Chacara</option>
@@ -123,6 +127,7 @@ export default class NovoUsuario extends Component {
                                 <option value="praca">Praca</option>
                                 <option value="quadra">Quadra</option>
                                 <option value="residencial">Residencial</option>
+                                <option value="rodovia">Rodovia</option>
                                 <option value="rua">Rua</option>
                                 <option value="sitio">Sitio</option>
                                 <option value="travessa">Travessa</option>
@@ -146,10 +151,11 @@ export default class NovoUsuario extends Component {
                     </div>
                     <div className="col-12">
                         <div className="form-group8">
-                            <label className="cidadeLabel">Cidade: </label>
+                            <label className="cidadeLabel">Municipio: </label>
                             <input type="text" className="cidade" name="cidade" required placeholder="Digite a cidade...."/>
                             <label className="ufLabel">UF: </label>
                             <select className="uf" name="uf" style={{transform: "scale(1.1)"}}>
+                                <option value="vazio"></option>
                                 <option value="ac">AC</option>
                                 <option value="al">AL</option>
                                 <option value="ap">AP</option>
