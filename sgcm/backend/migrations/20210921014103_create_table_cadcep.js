@@ -1,4 +1,3 @@
-
 exports.up = function(knex) {
     return knex.schema.createTable('cadcep', table => {
         table.string('cep', 9).notNull()

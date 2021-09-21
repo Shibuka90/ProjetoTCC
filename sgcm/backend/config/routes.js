@@ -1,4 +1,8 @@
 module.exports = app => {
-    app.route('/users')
-        .post(app.api.user.save)
+    app.route('/usuarios')
+        .post(app.api.usuarios.save)
+        .post(app.api.usuarios.get)
+
+    app.route('/usuarios/:codigo')
+        .put(app.api.usuarios.save)
 }
