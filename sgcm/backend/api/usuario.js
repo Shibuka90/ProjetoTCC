@@ -8,7 +8,7 @@ module.exports = app => {
         return bcrypt.hashSync(password, salt)
     }
     
-    const save = (req, res) => {
+    const save = async (req, res) => {
         const usuario = { ...req.body }
         if(req.params.codigo) usuario.codigo = req.params.codigo
 
@@ -56,8 +56,14 @@ module.exports = app => {
                 .catch(err => res.status(500).send(err))
         }
 
-        }
     }
 
-    return { save }
+    const get = (req, res) => {
+        app.db('usuarios')
+            .select('codigo', 'nome', 'email', 'cargo', 'admin' )
+            .then(usuarios => res.json(usuarios))
+            .catch(err => res.status(500).send(err))
+    }
+
+    return { save, get }
 }
