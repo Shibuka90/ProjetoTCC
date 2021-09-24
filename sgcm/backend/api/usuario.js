@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt-nodejs')
+const { serializeUser } = require('passport')
 
 module.exports = app => {
     const { existsOrError, notExistsOrError, equalsOrError } = app.api.validation
@@ -12,6 +13,10 @@ module.exports = app => {
         const usuario = { ...req.body }
         if(req.params.codigo) usuario.codigo = req.params.codigo
 
+        if(!req.originalUrl.startWith('/usuarios')) usuario.admin = false
+        if(!req.usuario || !req.usuario.admin) usuario.admin = false
+        
+        // Está verificando se o usuário esqueceu de preencher algum campo, se esqueceu o sistema irá mostrar uma mensagem
         try{
             existsOrError(usuario.nome, 'Nome não informado')
             existsOrError(usuario.email, 'Email não informado')
@@ -29,7 +34,7 @@ module.exports = app => {
             existsOrError(usuario.ufmunicipio, 'UF do Municipio não informado')
             existsOrError(usuario.celddd, 'DDD do Celular não informado')
             existsOrError(usuario.cel, 'Celular não informado')
-            existsOrError(usuario.password, usuario.confirmPassword, 'Senha não conferem')
+            equalsOrError(usuario.password, usuario.confirmPassword, 'Senha não conferem')
 
             const usuarioFromDB = await app.db('usuarios')
                 .where ({ email: usuario.email }).first()
