@@ -13,5 +13,5 @@ module.exports = app => {
     app.route('/usuarios/:codigo')
         .all(app.config.passport.authenticate())
         .put(app.api.usuario.save)
-        .get(admin(app.api.usuario.get))
+        .get(admin(app.api.usuario.getById))
 }
