@@ -3,7 +3,7 @@ import Main from "../../template/Main";
 import { Link, Redirect } from 'react-router-dom'
 import Nav from "../../template/Nav";
 import Header from "../../template/Header";
-import usuarioServico from "../servico/usuario.servico";
+// import usuarioServico from "../servico/usuario.servico";
 // import axios from "axios";
 // import { baseApiUrl } from "../../../main/global"; 
 
@@ -12,52 +12,63 @@ const headerProps = {
     title: "Cadastros de Colaboradores",
 }
 
-export default class Usuarios extends Component {    
-    constructor (props) {
-        super(props)
-        this.getUsuarios = this.getUsuarios.bind(this)
-        this.listaUsuarios = this.listaUsuarios.bind(this)
-        this.setUsuarios = this.setUsuarios.bind(this)
+export default class Usuarios extends Component { 
+   getAll = async () => {
+       try{ 
+           const response = await fetch("http://localhost:4000/usuarios")
+           const jsonData = await response.json()
 
-        this.state = {
-            usuarios: [],
-            currentUsuario: null,
-            currentIndex: -1, 
-        }
-    }
+           console.log(jsonData)
+       }catch (err) {
+           console.error(err.message)
+       }
+   }
+    
+    // constructor (props) {
+    //     super(props)
+    //     this.getUsuarios = this.getUsuarios.bind(this)
+    //     this.listaUsuarios = this.listaUsuarios.bind(this)
+    //     this.setUsuarios = this.setUsuarios.bind(this)
 
-     componentDidMount() {
-        this.getUsuarios()
-    }
+    //     this.state = {
+    //         usuarios: [],
+    //         currentUsuario: null,
+    //         currentIndex: -1, 
+    //     }
+    // }
+
+    //  componentDidMount() {
+    //     this.getUsuarios()
+    // }
 
    
-    getUsuarios(){
-        usuarioServico.getAll()
-            .then(response => {
-                this.setState({
-                    usuario: response.data
-                })
-                console.log(response.data)
-            })
-            .catch (e=> {
-                console.log(e)
-            })
-    }
+    // getUsuarios(){
+    //     usuarioServico.getAll()
+    //         .then(response => {
+    //             this.setState({
+    //                 usuario: response.data
+    //             })
+    //             console.log(response.data)
+    //         })
+    //         .catch (e=> {
+    //             console.log(e)
+    //         })
+    // }
 
-    listaUsuarios() {
-        this.getUsuarios()
-        this.setState({
-            currentUsuario: null,
-            currentIndex: -1
-        })
-    }
+    // listaUsuarios() {
+    //     this.getUsuarios()
+    //     this.setState({
+    //         currentUsuario: null,
+    //         currentIndex: -1
+    //     })
+    // }
 
-    setUsuarios(usuario, index){
-        this.setState({
-            currentUsuario: usuario,
-            currentIndex: index
-        })
-    }
+    // setUsuarios(usuario, index){
+    //     this.setState({
+    //         currentUsuario: usuario,
+    //         currentIndex: index
+    //     })
+    // }
 
     state = {
         redirect: false,      
