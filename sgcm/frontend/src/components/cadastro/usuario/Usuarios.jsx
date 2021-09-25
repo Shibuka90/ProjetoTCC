@@ -3,15 +3,64 @@ import Main from "../../template/Main";
 import { Link, Redirect } from 'react-router-dom'
 import Nav from "../../template/Nav";
 import Header from "../../template/Header";
+import usuarioServico from "../servico/usuario.servico";
+// import axios from "axios";
+// import { baseApiUrl } from "../../../main/global"; 
 
 const headerProps = {
     icon: 'users',
     title: "Cadastros de Colaboradores",
 }
 
-export default class Usuarios extends Component {
+export default class Usuarios extends Component {    
+    constructor (props) {
+        super(props)
+        this.getUsuarios = this.getUsuarios.bind(this)
+        this.listaUsuarios = this.listaUsuarios.bind(this)
+        this.setUsuarios = this.setUsuarios.bind(this)
+
+        this.state = {
+            usuarios: [],
+            currentUsuario: null,
+            currentIndex: -1, 
+        }
+    }
+
+     componentDidMount() {
+        this.getUsuarios()
+    }
+
+   
+    getUsuarios(){
+        usuarioServico.getAll()
+            .then(response => {
+                this.setState({
+                    usuario: response.data
+                })
+                console.log(response.data)
+            })
+            .catch (e=> {
+                console.log(e)
+            })
+    }
+
+    listaUsuarios() {
+        this.getUsuarios()
+        this.setState({
+            currentUsuario: null,
+            currentIndex: -1
+        })
+    }
+
+    setUsuarios(usuario, index){
+        this.setState({
+            currentUsuario: usuario,
+            currentIndex: index
+        })
+    }
+
     state = {
-        redirect: false
+        redirect: false,      
     }
 
     setRedirect = () => {
@@ -78,12 +127,13 @@ export default class Usuarios extends Component {
         )
     }
     render() {
+        // const { currentIndex, currentUsuario, usuarios } = this.state
         return (
             <React.Fragment>
                  <Main>
                      {this.renderRedirect()}
                      {this.renderButton()}
-                     {this.renderTable()}
+                     {this.renderTable()}                                                                                             
                 </Main>
                <Nav>
                     <aside className="menu-area">
